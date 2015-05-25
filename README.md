@@ -58,7 +58,7 @@ $ rm setuptools-16.0.zip
 ## Git
 Various things to setup with git
 
-## Installing Git
+### Installing Git
 ```sh
 $ sudo apt-get install git
 ...
