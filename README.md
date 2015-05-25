@@ -50,3 +50,4 @@ pip 7.0.1 from /usr/local/lib/python2.7/dist-packages (python 2.7)
 ```sh
 $ rm setuptools-16.0.zip
 ```
+
