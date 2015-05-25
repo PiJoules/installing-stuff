@@ -3,6 +3,7 @@ Guide for installing various things on a new linux such as java, pip, etc. via `
 
 ## Links to other stuff
 - [Markdown](https://help.github.com/articles/markdown-basics/)
+- [Setting up a Flask Application on Apache](https://github.com/PiJoules/FlaskApache)
 
 ## Java
 This is for installing the default JRE/JDK.
@@ -56,6 +57,14 @@ $ rm setuptools-16.0.zip
 
 ## Git
 Various things to setup with git
+
+## Installing Git
+```sh
+$ sudo apt-get install git
+...
+$ git --version # just to check if installed successfully
+git version 1.9.1
+```
 
 ### [Password Caching](https://help.github.com/articles/caching-your-github-password-in-git/)
 This will turn on the credential helper so that Git will save your password in memory for some time. This requires Git **1.7.10** or newer. By default, Git will cache your password for 15 minutes.
