@@ -1,6 +1,9 @@
 # Installing Stuff
 Guide for installing various things on a new linux such as java, pip, etc. via `apt-get`.
 
+## Links to other stuff
+- [Markdown](https://help.github.com/articles/markdown-basics/)
+
 ## Java
 This is for installing the default JRE/JDK.
 
@@ -49,4 +52,20 @@ pip 7.0.1 from /usr/local/lib/python2.7/dist-packages (python 2.7)
 4) The setuptools zip file may be in the current directory. If pip is successfully installed, this can be deleted.
 ```sh
 $ rm setuptools-16.0.zip
+```
+
+## Git
+Various things to setup with git
+
+### [Password Caching](https://help.github.com/articles/caching-your-github-password-in-git/)
+This will turn on the credential helper so that Git will save your password in memory for some time. This requires Git **1.7.10** or newer. By default, Git will cache your password for 15 minutes.
+
+1) Set git to use the credential memory cache. (Default is 15 min.)
+```sh
+$ git config --global credential.helper cache
+```
+
+2) To change the default password cache timeout **(in seconds)**, enter the following:
+```sh
+$ git config --global credential.helper 'cache --timeout=[# of seconds]'
 ```
