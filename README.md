@@ -69,3 +69,5 @@ $ git config --global credential.helper cache
 ```sh
 $ git config --global credential.helper 'cache --timeout=[# of seconds]'
 ```
+
+After pushing (and entering your password one more time), you then should be able to push to remote without having to enter a username or password again until the timeout is reached.
