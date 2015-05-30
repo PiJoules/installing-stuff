@@ -25,7 +25,7 @@ $ sudo apt-get install default-jre
 
 4) Install the Java Development Kit. This is usually need to compile some Java applications (like Ant, Maven, Eclipse, etc.).
 ```sh
-$ sudo apt-get install default-jre
+$ sudo apt-get install default-jdk
 ```
 
 At this point, you should have Java installed. You can check the version used by running:
