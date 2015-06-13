@@ -80,3 +80,22 @@ $ git config --global credential.helper 'cache --timeout=[# of seconds]'
 ```
 
 After pushing (and entering your password one more time), you then should be able to push to remote without having to enter a username or password again until the timeout is reached.
+
+### [Removeing multiple files from a git repo](http://stackoverflow.com/questions/492558/removing-multiple-files-from-a-git-repo-that-have-already-been-deleted-from-disk)
+If you ever end up with something like this
+```sh
+# Changes not staged for commit:
+#   (use "git add/rm <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#	deleted:    content/posts/firstpost.md
+#	deleted:    content/posts/secondpost.md
+#	deleted:    static/css/blog.min.css
+#	deleted:    static/css/hilite.css
+#	deleted:    static/js/bootstrap.min.js
+#	deleted:    static/js/jquery-1.11.0.min.js
+```
+and want to remove all these files that were already removed from the disk without typing `git rm file1 file2 file3 file4`, use this to delete all files that were deleted, but not staged for commit:
+```sh
+$ git rm $(git ls-files --deleted)  
+```
