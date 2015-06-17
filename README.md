@@ -99,3 +99,61 @@ and want to remove all these files that were already removed from the disk witho
 ```sh
 $ git rm $(git ls-files --deleted)  
 ```
+
+## [MongoDB](http://docs.mongodb.org/manual/tutorial/install-mongodb-on-ubuntu/)
+These steps are for installing MongoDB on Ubuntu 12.04+.
+
+### Installing MongoDB
+1) Import the public key used by the package management system.
+```sh
+$ sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10
+```
+
+2) Create a list file for MongoDB.
+```sh
+$ echo "deb http://repo.mongodb.org/apt/ubuntu "$(lsb_release -sc)"/mongodb-org/3.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.0.list
+```
+
+3) Reload local package database.
+```sh
+$ sudo apt-get update
+```
+
+4) Install the latest version of MongoDB.
+```sh
+$ sudo apt-get install -y mongodb-org
+```
+OR install a specific release of MongoDB (say 3.0.4)
+```sh
+$ sudo apt-get install -y mongodb-org=3.0.4 mongodb-org-server=3.0.4 mongodb-org-shell=3.0.4 mongodb-org-mongos=3.0.4 mongodb-org-tools=3.0.4
+```
+
+5) `(Optional)` If you want to prevent from updating to the next available version of MongoDB every time you run `aot-get update`, you can pin the currently installed version and ignore any new package updates.
+```sh
+$ echo "mongodb-org hold" | sudo dpkg --set-selections
+$ echo "mongodb-org-server hold" | sudo dpkg --set-selections
+$ echo "mongodb-org-shell hold" | sudo dpkg --set-selections
+$ echo "mongodb-org-mongos hold" | sudo dpkg --set-selections
+$ echo "mongodb-org-tools hold" | sudo dpkg --set-selections
+```
+
+### Running MongoDB
+1) Starting the MongoDB server
+```sh
+$ sudo service mongod start
+```
+
+2) Stopping the MongoDB server
+```sh
+$ sudo service mongod stop
+```
+
+3) Restarting the MongoDB server
+```sh
+$ sudo service mongod restart
+```
+
+4) Accessing the MongoDB shell
+```sh
+$ mongo
+```
