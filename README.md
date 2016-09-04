@@ -46,7 +46,7 @@ $ curl https://bootstrap.pypa.io/get-pip.py | sudo python -
 
 3) Check if `pip` is installed by running
 ```sh
-$ pip -version
+$ pip --version
 pip 7.0.1 from /usr/local/lib/python2.7/dist-packages (python 2.7)
 ```
 
