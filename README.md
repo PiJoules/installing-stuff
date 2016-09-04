@@ -36,7 +36,7 @@ $ java -version
 ## Pip
 1) Install `setuptools` using `curl`.
 ```sh
-$ curl https://bitbucket.org/pypa/setuptools/raw/bootstrap/ez_setup.py | sudo python -
+$ curl https://bootstrap.pypa.io/ez_setup.py | sudo python -
 ```
 
 2) Install `pip`.
